@@ -85,17 +85,17 @@ const IntenjobsMission = () => {
           >
             {/* Main Mission Statement - Large Quote */}
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight">
-              "Change{" "}
+              &quot;Change{" "}
               <span className="text-lime-bright">1,000,000</span>{" "}
-              Filipino 'job seekers' title to 'employed' by{" "}
-              <span className="text-lime-bright">2026</span>"
+              Filipino &apos;job seekers&apos; title to &apos;employed&apos; by{" "}
+              <span className="text-lime-bright">2026</span>&quot;
             </h2>
 
             {/* Supporting Description */}
             <div className="space-y-4">
               <p className="text-white/70 text-base md:text-lg leading-relaxed">
                 Our mission is to empower 1 million Filipino job seekers to not only change their job
-                titles to 'Employed', but also to foster long-term career growth and stability by 2026.
+                titles to &apos;Employed&apos;, but also to foster long-term career growth and stability by 2026.
               </p>
 
               <p className="text-white/70 text-base md:text-lg leading-relaxed">
