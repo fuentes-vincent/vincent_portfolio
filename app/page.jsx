@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Photo from "@/components/Photo"
 import Social from "@/components/Social"
 import Stats from "@/components/Stats"
@@ -13,18 +14,22 @@ const Home = () => {
         <div className="text-center xl:text-left order-2 xl:order-none">
           <span className="text-xl">Software Developer</span>
           <h1 className="h1 mb-6">
-            Hi I&apos;m <br /> <span className="text-blue-500">Vincent Fuentes</span>
+            Hi I&apos;m <br /> <span className="text-accent">Vincent Fuentes</span>
           </h1>
-          <p className="max-w-[500px] mb-9 text-white/80">I have 3-4 years of experience as a Software Developer on those various companies</p>
+          <p className="max-w-[500px] mb-9 text-white/80">I have 6+ years of experience as a Software Developer across multiple companies in the Philippines.</p>
           {/* button and social media */}
           <div className="flex flex-col xl:flex-row items-center gap-8">
+            {/* asChild passes Button styles to Link without double DOM nesting */}
             <Button
-            variant="outline"
-            size="lg"
-            className="uppercase flex items-center gap-2"
+              variant="outline"
+              size="lg"
+              className="uppercase flex items-center gap-2"
+              asChild
             >
-              <span>Download Resume</span>
-              <FiDownload className="text-xl" />
+              <Link href="/resume-view">
+                <span>View Resume</span>
+                <FiDownload className="text-xl" />
+              </Link>
             </Button>
               <div className="mb-8 xl:mb-0">
                 <Social
