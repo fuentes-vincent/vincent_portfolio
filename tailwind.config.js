@@ -30,6 +30,10 @@ module.exports = {
           DEFAULT: "#00ff99",
           hover: "#00e187",
         },
+        lime: {
+          DEFAULT: "#84cc16",
+          bright: "#bef264",
+        },
       },
       keyframes: {
         "accordion-down": {
