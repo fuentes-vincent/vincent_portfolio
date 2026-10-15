@@ -17,7 +17,7 @@ const projects = [
         description:
             "A job hiring platform tailored for Filipino BPO, call centre, and VA job seekers — similar to Indeed and LinkedIn Jobs. Connects candidates with top employers like Alorica, Concentrix, TaskUs, and Teleperformance. Features job listings, employer profiles, and an intuitive application flow built with Next.js 14 and Framer Motion.",
         stack: ["Next.js", "Tailwind CSS", "Framer Motion", "Firebase"],
-        live: "",
+        live: "https://inten.jobs/",
         github: "",
     },
     {
@@ -28,7 +28,7 @@ const projects = [
         description:
             "A jewelry e-commerce mobile application built with Expo and React Native. Lets users browse, search, and purchase jewelry products with a seamless shopping experience powered by Supabase for real-time data and Zustand for cart and session state management.",
         stack: ["Expo", "React Native", "TypeScript", "Supabase", "Zustand"],
-        live: "",
+        live: "https://cme-staging.vercel.app/login",
         github: "",
     },
     {
@@ -39,7 +39,7 @@ const projects = [
         description:
             "The public-facing web platform for Metrobank built with Next.js 14. Integrates a DatoCMS headless CMS via GraphQL/Apollo, Algolia search, Google Maps API, Recharts for data visualization, and Netlify Functions for serverless operations.",
         stack: ["Next.js", "TypeScript", "GraphQL", "DatoCMS", "Algolia"],
-        live: "",
+        live: "https://www.metrobank.com.ph/home",
         github: "",
     },
     {
@@ -50,7 +50,7 @@ const projects = [
         description:
             "A healthcare e-commerce platform for purchasing medicines and health products online. Built with Next.js 15 and Supabase, it features product listings, order management, data visualization via Chart.js, rich text content editing, and transactional email via Resend.",
         stack: ["Next.js 15", "TypeScript", "Supabase", "Chart.js", "Tailwind CSS"],
-        live: "",
+        live: "https://axentra.axentrahealth.com/",
         github: "",
     },
     {
@@ -61,7 +61,7 @@ const projects = [
         description:
             "A marketing and informational web application for Super Manila built with Next.js 14. Features smooth page animations with Framer Motion, Swiper carousels, SASS styling, and interactive accordion sections via Radix UI.",
         stack: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS", "SASS"],
-        live: "",
+        live: "https://www.supermanila.ph/",
         github: "",
     },
     {
@@ -72,7 +72,7 @@ const projects = [
         description:
             "A comic platform where users can discover, buy, and read episodes and chapters of their favourite comics. Available on both web (Ruby on Rails + React) and mobile (Expo + React Native). Features in-app purchases, chapter unlocking, reading progress tracking, and Zustand-powered state management.",
         stack: ["Ruby on Rails", "React", "Expo", "React Native", "PostgreSQL"],
-        live: "",
+        live: "https://www.comic-odyssey.com/",
         github: "",
     },
     {
@@ -94,8 +94,19 @@ const projects = [
         description:
             "A graffiti art iOS application built natively with Swift and UIKit. Lets users create, customize, and stylize graffiti-style lettering and artwork directly on their device with an intuitive touch-based interface.",
         stack: ["Swift", "UIKit"],
-        live: "",
+        live: "https://graffwriter.com/",
         github: "",
+    },
+    {
+        num: "09",
+        category: "Debt Reminder Web App",
+        title: "iLista",
+        company: "Personal Project",
+        description:
+            "A debt tracker for informal lending: \"Alam mo agad kung sino ang may utang.\" Record what you lent and what you owe, compute tubo and installment schedules, and log partial payments that are applied inside the database so balances can't drift. A nightly job emails reminders before anything falls due, so you never have to ask twice.",
+        stack: ["Next.js", "TypeScript", "Supabase", "Resend", "Tailwind CSS"],
+        live: "https://remindersilista.online",
+        github: "https://github.com/vincent-mashupgarage/iLista",
     },
 ]
 
@@ -155,6 +166,8 @@ const Work = () => {
                                             <TooltipTrigger asChild>
                                                 <Link
                                                     href={project.live}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
                                                     className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group hover:bg-accent transition-all duration-300"
                                                 >
                                                     <BsArrowUpRight className="text-white text-2xl group-hover:text-primary" />
@@ -218,7 +231,7 @@ const Work = () => {
                                                     ? "border-accent/40 text-accent"
                                                     : "border-white/10 text-white/20"
                                             }`}>
-                                                {p.company}
+                                                {p.company === "Personal Project" ? "Personal Project" : "Company Project"}
                                             </span>
                                         </div>
                                     </div>
